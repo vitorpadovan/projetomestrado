@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JOptionPane;
 import javax.swing.JPopupMenu;
 
 public class ActionSobre implements ActionListener{
@@ -17,10 +18,6 @@ public class ActionSobre implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		JPopupMenu menu = new JPopupMenu();
-		menu.setSize(new Dimension(300, 300));
-		menu.setVisible(true);
-		menu.show(null, 200, 200);
-		System.out.println("Acionando o menu sobre");
+		JOptionPane.showMessageDialog(this.invocador, "Mensagem", "Titulo", JOptionPane.INFORMATION_MESSAGE);
 	}
 }
